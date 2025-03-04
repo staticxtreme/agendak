@@ -1,0 +1,116 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 81, 255);
+    border-radius: 10px;
+    padding: 30px;
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 0 120px rgb(0, 81, 255);
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.currency-options {
+    margin-top: 10px;
+}
+
+.currency-options label {
+    margin-right: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #1783ff;
+    box-shadow: 0 0 20px rgba(0, 81, 255);
+    color: white;
+    border: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #547cff;
+    /* Cambia el color al pasar el mouse sobre el botón */
+    color: rgb(0, 183, 255);
+    box-shadow: 0 0 30px rgb(0, 81, 255);
+}
+
+#citas-pendientes,
+#citas-cumplidas,
+#citas-pospuestas {
+    margin-top: 20px;
+}
+
+.cita {
+    margin-bottom: 10px;
+}
+
+/* Estilos específicos para dispositivos con pantalla de hasta 480px (como smartphones) */
+@media (max-width: 480px) {
+
+    input[type="text"],
+    input[type="date"],
+    input[type="number"] {
+        width: calc(100% - 64px);
+        /* Considerando el padding */
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-group img {
+    margin-right: 3px;
+    margin-top: 3px;
+    /* Espacio entre el icono y la etiqueta */
+    width: 25px;
+    /* Ajusta el ancho del icono según tus necesidades */
+    height: 25px;
+    /* Ajusta la altura del icono según tus necesidades */
+}
