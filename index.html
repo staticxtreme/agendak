@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-D5M2iDTwdQ9nf4bpDz3Otg9B45CkFBjxaOI4ByPJSgn2vBYRjsw1HGp5pO9fvI2D5S1B1jixDR5deMz8dCeTmA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Clientes y Citas</title>
+</head>
+<body>
+    <div class="container" id="app-container">
+    <div class="container">
+        <div class="input-group">
+        <img src="./Svg/user-doctor-solid.svg" alt=""><h3>Clientes y Citas</h3>
+        </div>
+        <form id="client-form">
+            <div class="input-group">
+            <img src="./Svg/heart-circle-plus-solid.svg" alt="">
+            <label for="client-name">Nombre del Cliente:</label>
+            </div>
+            <input type="text" id="client-name" required>   
+            <div class="input-group"> 
+            <img src="./Svg/id-card-clip-solid (1).svg" alt="">   
+            <br><label for="cedula">Cédula:</label>
+            </div>
+            <input type="text" id="cedula" required>  
+            <div class="input-group">   
+            <img src="./Svg/wheelchair-move-solid.svg" alt="">  
+            <br><label for="appointment-date">Fecha de la Cita:</label>
+            </div> 
+            <input type="date" id="appointment-date" required>
+            <div class="input-group"> 
+            <img src="./Svg/clock-rotate-left-solid.svg" alt="">
+            <br><label for="appointment-time">Hora de la Cita:</label>
+            </div>
+            <input type="time" id="appointment-time" required>
+            <div class="input-group"> 
+            <img src="./Svg/file-medical-solid.svg" alt="">
+            <br><label for="motivo">Motivo:</label>
+            </div>
+            <input type="text" id="motivo">
+            <div class="input-group"> 
+            <img src="./Svg/pager-solid.svg" alt="">
+            <br><label for="amount">Monto Pagado:</label>
+            </div>
+            <input type="number" id="amount" placeholder="0">
+        
+            <div class="currency-options">
+            <div class="input-group"> 
+            <img src="./Svg/money-bill-trend-up-solid.svg" alt="">
+            <label><input type="radio" name="currency" value="bolivares"> Bolívares</label>
+            </div>
+            <div class="input-group"> 
+            <img src="./Svg/sack-dollar-solid.svg" alt="">
+            <label><input type="radio" name="currency" value="dolares"> Dólares</label>
+            </div>
+            <div class="input-group"> 
+            <img src="./Svg/mobile-retro-solid.svg" alt="">
+            <br><label for="whatsapp-number"><i class="fas fa-phone"></i> Número de WhatsApp:</label>
+            </div>
+            <input type="text" id="whatsapp-number" placeholder="Ej. 1234567890">
+            <button type="button" onclick="openWhatsApp()">Escribir por WhatsApp</button>
+            <button type="button" onclick="saveAppointment()">Guardar Cita</button>
+        </form>
+        <div class="input-group"> 
+        <img src="./Svg/triangle-exclamation-solid.svg" alt="">
+        <br><br><h3>Citas Pendientes</h3>
+        </div>
+        <div id="citas-pendientes"></div>
+        <br><div>
+        <div class="input-group"> 
+        <img src="./Svg/circle-check-regular.svg" alt="">
+        <h3>Citas Cumplidas</h3>
+        </div>
+        <div id="citas-cumplidas"></div>
+        </div>
+        <br><div>
+        <div class="input-group"> 
+        <img src="./Svg/clock-regular.svg" alt="">
+        <h3>Citas Pospuestas</h3>
+        </div>
+        <div id="citas-pospuestas"></div>
+        </div>
+    </div>
+
+    <i class="fas fa-check-circle"></i> <!-- Ícono de check -->
+
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
